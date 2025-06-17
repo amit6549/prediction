@@ -4,7 +4,7 @@ from config import ADMIN_IDS
 from database import get_all_users, get_user_count
 
 def is_admin(user_id):
-    return user_id in 868578453
+    return user_id in ADMIN_IDS
 
 def broadcast(update: Update, context: CallbackContext):
     if not is_admin(update.effective_user.id):
